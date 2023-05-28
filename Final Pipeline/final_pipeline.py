@@ -53,8 +53,8 @@ def map_sobel_values(x, threshold):
 
 #sobel
 def sobel(image):
-	# compute the sobel mean score of the image and then return the sobel
-	# measure
+	# compute the sobel mean score of the image and then return the sobel score
+	
     sobelx = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=5)
     sobely = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize=5)
     sobel = np.abs(sobelx) + np.abs(sobely)
@@ -90,12 +90,12 @@ for file_name in os.listdir(folder_path):
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)
 
-        # Calculate bounding box values where present. including Laplacian and sobel values 
+        # Calculate bounding box values where present. 
         
         camera1_json = []
         camera2_json = []
         complete_sobel_laplacian_json = [] 
-        # Adjust step range if wished.  Replace with frame_count for whole video
+        
         for i in range(0, frame_count, sampling_rate):
              
             img1 = cv2.cvtColor(np.squeeze(Image_data_1[i]), cv2.COLOR_GRAY2BGR)
