@@ -4,7 +4,7 @@ Created on Mon Feb 20 13:59:38 2023
 Requirements for deepposekit: tensorflow, scikit-learn, imgaug
 Requirements for gpu pytorch, command line install: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 then install ultralytics.  If no gpu required/available skip previous step.
-@author: odens
+@author: odensejohn
 """
 
 import numpy as np
